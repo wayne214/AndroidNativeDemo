@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidNativeDemo</string>
+    <string name="title_activity_pre_load_react">PreLoadReactActivity</string>
+</resources>
