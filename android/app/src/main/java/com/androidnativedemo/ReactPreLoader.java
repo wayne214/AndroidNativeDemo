@@ -38,6 +38,7 @@ public class ReactPreLoader {
                 null);
         // 2.添加到缓存
         CACHE_VIEW_MAP.put(componentName, rootView);
+        Log.i(TAG, "preLoad: "+ componentName);
     }
     /**
      * 获取ReactRootView
@@ -60,7 +61,7 @@ public class ReactPreLoader {
                 parent.removeView(rootView);
             }
         }catch (Throwable e) {
-            Log.e("ReactPreLoader", e.getMessage());
+            Log.e(TAG, e.getMessage());
         }
     }
 }

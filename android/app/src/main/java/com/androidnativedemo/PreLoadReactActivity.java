@@ -15,14 +15,14 @@ import javax.annotation.Nullable;
 public class PreLoadReactActivity extends ReactActivity implements DefaultHardwareBackBtnHandler, PermissionAwareActivity{
     private PreLoadReactDelegate mPreLoadReactDelegate;
 
-    public PreLoadReactActivity(PreLoadReactDelegate mPreLoadReactDelegate) {
-        this.mPreLoadReactDelegate = mPreLoadReactDelegate;
-    }
+//    public PreLoadReactActivity(PreLoadReactDelegate mPreLoadReactDelegate) {
+//        this.mPreLoadReactDelegate = mPreLoadReactDelegate;
+//    }
     private PreLoadReactDelegate createPreLoadReactDelegate() {
         return new PreLoadReactDelegate(this, getMainComponentName());
     }
     public PreLoadReactActivity() {
-
+        this.mPreLoadReactDelegate = createPreLoadReactDelegate();
     }
     @Nullable
     @Override

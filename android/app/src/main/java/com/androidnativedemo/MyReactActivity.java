@@ -4,9 +4,6 @@ import javax.annotation.Nullable;
 
 public class MyReactActivity extends PreLoadReactActivity {
 
-    public MyReactActivity(PreLoadReactDelegate mPreLoadReactDelegate) {
-        super(mPreLoadReactDelegate);
-    }
     public MyReactActivity() {
 
     }
@@ -14,6 +11,15 @@ public class MyReactActivity extends PreLoadReactActivity {
     @Nullable
     @Override
     protected String getMainComponentName() {
-        return "HotRN";
+        return "AndroidNativeDemo";
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            ReactPreLoader.preLoad(MyReactActivity.this, "AndroidNativeDemo");
+        }
     }
 }
